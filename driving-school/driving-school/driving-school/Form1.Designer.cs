@@ -221,21 +221,21 @@
             // unosToolStripMenuItem3
             // 
             this.unosToolStripMenuItem3.Name = "unosToolStripMenuItem3";
-            this.unosToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.unosToolStripMenuItem3.Size = new System.Drawing.Size(115, 22);
             this.unosToolStripMenuItem3.Text = "unos";
             this.unosToolStripMenuItem3.Click += new System.EventHandler(this.unosToolStripMenuItem3_Click);
             // 
             // pregledToolStripMenuItem
             // 
             this.pregledToolStripMenuItem.Name = "pregledToolStripMenuItem";
-            this.pregledToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pregledToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.pregledToolStripMenuItem.Text = "pregled";
             this.pregledToolStripMenuItem.Click += new System.EventHandler(this.pregledToolStripMenuItem_Click);
             // 
             // brisanjeToolStripMenuItem3
             // 
             this.brisanjeToolStripMenuItem3.Name = "brisanjeToolStripMenuItem3";
-            this.brisanjeToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.brisanjeToolStripMenuItem3.Size = new System.Drawing.Size(115, 22);
             this.brisanjeToolStripMenuItem3.Text = "brisanje";
             this.brisanjeToolStripMenuItem3.Click += new System.EventHandler(this.brisanjeToolStripMenuItem3_Click);
             // 
@@ -252,21 +252,21 @@
             // unosToolStripMenuItem4
             // 
             this.unosToolStripMenuItem4.Name = "unosToolStripMenuItem4";
-            this.unosToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.unosToolStripMenuItem4.Size = new System.Drawing.Size(115, 22);
             this.unosToolStripMenuItem4.Text = "unos";
             this.unosToolStripMenuItem4.Click += new System.EventHandler(this.unosToolStripMenuItem4_Click);
             // 
             // pregledToolStripMenuItem1
             // 
             this.pregledToolStripMenuItem1.Name = "pregledToolStripMenuItem1";
-            this.pregledToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.pregledToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
             this.pregledToolStripMenuItem1.Text = "pregled";
             this.pregledToolStripMenuItem1.Click += new System.EventHandler(this.pregledToolStripMenuItem1_Click);
             // 
             // brisanjeToolStripMenuItem4
             // 
             this.brisanjeToolStripMenuItem4.Name = "brisanjeToolStripMenuItem4";
-            this.brisanjeToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.brisanjeToolStripMenuItem4.Size = new System.Drawing.Size(115, 22);
             this.brisanjeToolStripMenuItem4.Text = "brisanje";
             this.brisanjeToolStripMenuItem4.Click += new System.EventHandler(this.brisanjeToolStripMenuItem4_Click);
             // 
@@ -283,21 +283,21 @@
             // unosToolStripMenuItem5
             // 
             this.unosToolStripMenuItem5.Name = "unosToolStripMenuItem5";
-            this.unosToolStripMenuItem5.Size = new System.Drawing.Size(152, 22);
+            this.unosToolStripMenuItem5.Size = new System.Drawing.Size(115, 22);
             this.unosToolStripMenuItem5.Text = "unos";
             this.unosToolStripMenuItem5.Click += new System.EventHandler(this.unosToolStripMenuItem5_Click);
             // 
             // pregledToolStripMenuItem2
             // 
             this.pregledToolStripMenuItem2.Name = "pregledToolStripMenuItem2";
-            this.pregledToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.pregledToolStripMenuItem2.Size = new System.Drawing.Size(115, 22);
             this.pregledToolStripMenuItem2.Text = "pregled";
             this.pregledToolStripMenuItem2.Click += new System.EventHandler(this.pregledToolStripMenuItem2_Click);
             // 
             // brisanjeToolStripMenuItem5
             // 
             this.brisanjeToolStripMenuItem5.Name = "brisanjeToolStripMenuItem5";
-            this.brisanjeToolStripMenuItem5.Size = new System.Drawing.Size(152, 22);
+            this.brisanjeToolStripMenuItem5.Size = new System.Drawing.Size(115, 22);
             this.brisanjeToolStripMenuItem5.Text = "brisanje";
             this.brisanjeToolStripMenuItem5.Click += new System.EventHandler(this.brisanjeToolStripMenuItem5_Click);
             // 
@@ -329,21 +329,21 @@
             // unosToolStripMenuItem6
             // 
             this.unosToolStripMenuItem6.Name = "unosToolStripMenuItem6";
-            this.unosToolStripMenuItem6.Size = new System.Drawing.Size(152, 22);
+            this.unosToolStripMenuItem6.Size = new System.Drawing.Size(120, 22);
             this.unosToolStripMenuItem6.Text = "unos";
             this.unosToolStripMenuItem6.Click += new System.EventHandler(this.unosToolStripMenuItem6_Click);
             // 
             // brisanjeToolStripMenuItem6
             // 
             this.brisanjeToolStripMenuItem6.Name = "brisanjeToolStripMenuItem6";
-            this.brisanjeToolStripMenuItem6.Size = new System.Drawing.Size(152, 22);
+            this.brisanjeToolStripMenuItem6.Size = new System.Drawing.Size(120, 22);
             this.brisanjeToolStripMenuItem6.Text = "brisanje";
             this.brisanjeToolStripMenuItem6.Click += new System.EventHandler(this.brisanjeToolStripMenuItem6_Click);
             // 
             // rasporedToolStripMenuItem
             // 
             this.rasporedToolStripMenuItem.Name = "rasporedToolStripMenuItem";
-            this.rasporedToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rasporedToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.rasporedToolStripMenuItem.Text = "raspored";
             this.rasporedToolStripMenuItem.Click += new System.EventHandler(this.rasporedToolStripMenuItem_Click);
             // 

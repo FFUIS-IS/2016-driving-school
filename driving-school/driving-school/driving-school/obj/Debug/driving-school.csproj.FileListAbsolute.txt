@@ -20,3 +20,6 @@ C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-sc
 C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving_school.Form1.resources
 C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving_school.Properties.Resources.resources
 C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving-school.csproj.GenerateResource.Cache
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving_school.UnosKandidata.resources
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving_school.UnosInstruktora.resources
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving_school.UnosVozila.resources
