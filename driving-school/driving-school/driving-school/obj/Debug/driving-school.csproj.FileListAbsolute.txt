@@ -10,3 +10,13 @@ C:\Users\w7\Desktop\driving-school\driving-school\obj\Debug\driving_school.Prope
 C:\Users\w7\Desktop\driving-school\driving-school\obj\Debug\driving-school.csproj.GenerateResource.Cache
 C:\Users\w7\Desktop\driving-school\driving-school\obj\Debug\driving-school.exe
 C:\Users\w7\Desktop\driving-school\driving-school\obj\Debug\driving-school.pdb
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving-school.exe
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving-school.pdb
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\bin\Debug\Databas.mdf
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\bin\Debug\Databas_log.ldf
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\bin\Debug\driving-school.exe
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\bin\Debug\driving-school.pdb
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving-school.csprojResolveAssemblyReference.cache
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving_school.Form1.resources
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving_school.Properties.Resources.resources
+C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school\driving-school\obj\Debug\driving-school.csproj.GenerateResource.Cache

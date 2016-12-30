@@ -61,14 +61,158 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrisanjeInstruktora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrisanjeInstruktora.Designer.cs">
+      <DependentUpon>BrisanjeInstruktora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrisanjeKandidata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrisanjeKandidata.Designer.cs">
+      <DependentUpon>BrisanjeKandidata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrisanjePolaganjaTestova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrisanjePolaganjaTestova.Designer.cs">
+      <DependentUpon>BrisanjePolaganjaTestova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrisanjeRasporedaPolaganjaPrvePomoci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrisanjeRasporedaPolaganjaPrvePomoci.Designer.cs">
+      <DependentUpon>BrisanjeRasporedaPolaganjaPrvePomoci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrisanjeRasporedaPolaganjaVoznje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrisanjeRasporedaPolaganjaVoznje.Designer.cs">
+      <DependentUpon>BrisanjeRasporedaPolaganjaVoznje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrisanjeVozila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrisanjeVozila.Designer.cs">
+      <DependentUpon>BrisanjeVozila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrisanjeVremenaObuke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrisanjeVremenaObuke.Designer.cs">
+      <DependentUpon>BrisanjeVremenaObuke.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PregledPolaganjaTestova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledPolaganjaTestova.Designer.cs">
+      <DependentUpon>PregledPolaganjaTestova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PregledPolaganjaVoznje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledPolaganjaVoznje.Designer.cs">
+      <DependentUpon>PregledPolaganjaVoznje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PregledRasporedaPolaganjaPrvePomoci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledRasporedaPolaganjaPrvePomoci.Designer.cs">
+      <DependentUpon>PregledRasporedaPolaganjaPrvePomoci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PretragaKandidata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PretragaKandidata.Designer.cs">
+      <DependentUpon>PretragaKandidata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrikazInstruktora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrikazInstruktora.Designer.cs">
+      <DependentUpon>PrikazInstruktora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrikazKandidata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrikazKandidata.Designer.cs">
+      <DependentUpon>PrikazKandidata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrikazOpstina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrikazOpstina.Designer.cs">
+      <DependentUpon>PrikazOpstina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrikazVozila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrikazVozila.Designer.cs">
+      <DependentUpon>PrikazVozila.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RasporedVremenaObuke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RasporedVremenaObuke.Designer.cs">
+      <DependentUpon>RasporedVremenaObuke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpisakKategorija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpisakKategorija.Designer.cs">
+      <DependentUpon>SpisakKategorija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnosInstruktora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnosInstruktora.Designer.cs">
+      <DependentUpon>UnosInstruktora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnosKandidata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnosKandidata.Designer.cs">
+      <DependentUpon>UnosKandidata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnosPolaganjaPrvePomoci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnosPolaganjaPrvePomoci.Designer.cs">
+      <DependentUpon>UnosPolaganjaPrvePomoci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnosPolaganjaTestova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnosPolaganjaTestova.Designer.cs">
+      <DependentUpon>UnosPolaganjaTestova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnosPolaganjeVoznje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnosPolaganjeVoznje.Designer.cs">
+      <DependentUpon>UnosPolaganjeVoznje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnosVozila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnosVozila.Designer.cs">
+      <DependentUpon>UnosVozila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnosVremenaObuke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnosVremenaObuke.Designer.cs">
+      <DependentUpon>UnosVremenaObuke.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
