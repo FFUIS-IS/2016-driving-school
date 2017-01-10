@@ -47,6 +47,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "ReviewCar";
             this.Text = "ReviewCar";
+            this.Load += new System.EventHandler(this.ReviewCar_Load);
             this.ResumeLayout(false);
 
         }

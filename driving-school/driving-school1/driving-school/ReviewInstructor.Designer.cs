@@ -47,6 +47,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "ReviewInstructor";
             this.Text = "ReviewInstructor";
+            this.Load += new System.EventHandler(this.ReviewInstructor_Load);
             this.ResumeLayout(false);
 
         }

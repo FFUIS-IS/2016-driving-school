@@ -47,6 +47,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "ReviewCategory";
             this.Text = "ReviewCategory";
+            this.Load += new System.EventHandler(this.ReviewCategory_Load);
             this.ResumeLayout(false);
 
         }

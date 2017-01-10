@@ -47,6 +47,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "ReviewMunicipalities";
             this.Text = "ReviewMunicipalities";
+            this.Load += new System.EventHandler(this.ReviewMunicipalities_Load);
             this.ResumeLayout(false);
 
         }

@@ -47,6 +47,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "ReviewLayingDriving";
             this.Text = "ReviewLayingDriving";
+            this.Load += new System.EventHandler(this.ReviewLayingDriving_Load);
             this.ResumeLayout(false);
 
         }

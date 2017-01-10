@@ -47,6 +47,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "ReviewTimeTraining";
             this.Text = "ReviewTimeTraining";
+            this.Load += new System.EventHandler(this.ReviewTimeTraining_Load);
             this.ResumeLayout(false);
 
         }

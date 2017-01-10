@@ -47,6 +47,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "ReviewLayingFirstHelp";
             this.Text = "ReviewLayingFirstHelp";
+            this.Load += new System.EventHandler(this.ReviewLayingFirstHelp_Load);
             this.ResumeLayout(false);
 
         }

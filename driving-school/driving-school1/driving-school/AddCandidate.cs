@@ -46,6 +46,7 @@ namespace driving_school
             }
 
 
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -99,6 +100,7 @@ namespace driving_school
             }
 
             SqlConnection con = new SqlConnection(AddCandidate.path);
+
             try
             {
                 con.Open();
@@ -111,14 +113,13 @@ namespace driving_school
 
             SqlCommand command = con.CreateCommand();
 
-            command.CommandText = "SELECT ID FROM municipalities WHERE Naziv = '" + Municipalities.Text + "';";
+            command.CommandText = "SELECT Id FROM municipalities WHERE name = '" + Municipalities.Text + "';";
 
             SqlDataReader rdr = command.ExecuteReader();
             rdr.Read();
-            string d = rdr.GetString(0);
+            int d = rdr.GetInt32(0);
 
-
-            command.CommandText = "INSERT INTO candidate ( municipalities_id, first_name, last_name, unique_identifacion_number, Id_number, address, phone_number) VALUES ( " + d + "," + FirstName.Text + "','" + LastName.Text + "','" + UniqueIN.Text + "','" + IDNumber.Text + "','" + Address.Text + "','" + PhoneNumber.Text +  "');";
+            command.CommandText = "INSERT INTO candidate ( municipalities_id, first_name, last_name, unique_identifacion_number, Id_number, address, phone_number) VALUES ( " + d + "," + FirstName.Text + "','" + LastName.Text + "','" + UniqueIN.Text + "','" + IDNumber.Text + "','" + Address.Text + "','" + PhoneNumber.Text + "');";
             try
             {
                 command.ExecuteNonQuery();
@@ -140,6 +141,8 @@ namespace driving_school
             PhoneNumber.Clear();
             Municipalities.SelectedIndex = -1;
             con.Close();
-        }
+
+
     }
+}
 }
