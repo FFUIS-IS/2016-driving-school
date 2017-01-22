@@ -14,8 +14,10 @@ namespace driving_school
 {
     public partial class Form1 : Form
     {
+        public static string User;
+        public static string Password;
+        public static string path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school1\driving-school\Databas.mdf;Integrated Security = True";
 
-        
 
         public Form1()
         {
@@ -37,10 +39,58 @@ namespace driving_school
                 return;
             }
 
-            
+            SqlConnection con = new SqlConnection(Form1.path);
+            try
+            {
+                con.Open();
+            }
 
-            HomePage a = new HomePage();
-            a.Show();
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message);
+                return;
+            }
+
+            SqlCommand command = con.CreateCommand();
+            command.CommandText = "SELECT * FROM  Registration WHERE user_name = '" + user.Text + "' AND password = '" + password.Text + "';";
+
+            SqlDataReader rdr = command.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                if (user.Text == rdr[0].ToString() && password.Text == rdr[1].ToString().Trim())
+                {
+                    User = rdr[0].ToString();
+                    Password = rdr[1].ToString();
+                }
+            }
+
+            if (user.Text == User && password.Text == Password.Trim())
+            {
+
+                HomePage a = new HomePage();
+                a.Show();
+                this.Hide();
+            }
+
+            else
+            {
+                try
+                {
+                    HomePage a = new HomePage();
+                    a.Show();
+                    this.Hide();
+                    user.Clear();
+                    password.Clear();
+                    user.Focus();
+                }
+                catch (Exception ee)
+                { MessageBox.Show(ee.Message); }
+               
+            }
+            
+            con.Close();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

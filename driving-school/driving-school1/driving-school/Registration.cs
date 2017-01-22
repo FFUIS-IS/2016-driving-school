@@ -65,6 +65,31 @@ namespace driving_school
 
             SqlCommand command = con.CreateCommand();
 
+            command.CommandText = "INSERT INTO Registration  (user_name, password) VALUES   ('" + textBox1.Text + "','" + textBox2.Text + "')";
+
+            try
+            {
+
+                command.ExecuteNonQuery();
+
+            }
+
+            catch (Exception ee)
+            {
+
+                MessageBox.Show("Registration failed. \n Try again");
+
+                con.Close();
+                return;
+
+            }
+
+            MessageBox.Show("successful registration", "Registration", MessageBoxButtons.OK);
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox1.Focus();
+
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -118,8 +118,9 @@ namespace driving_school
             SqlDataReader rdr = command.ExecuteReader();
             rdr.Read();
             int d = rdr.GetInt32(0);
+            rdr.Close();
 
-            command.CommandText = "INSERT INTO candidate ( municipalities_id, first_name, last_name, unique_identifacion_number, Id_number, address, phone_number) VALUES ( " + d + "," + FirstName.Text + "','" + LastName.Text + "','" + UniqueIN.Text + "','" + IDNumber.Text + "','" + Address.Text + "','" + PhoneNumber.Text + "');";
+            command.CommandText = "INSERT INTO candidate ( municipalities_id, first_name, last_name, unique_identifacion_number, Id_number, address, phone_number) VALUES ( " + d + ",'" + FirstName.Text + "','" + LastName.Text + "'," + UniqueIN.Text + ",'" + IDNumber.Text + "','" + Address.Text + "'," + PhoneNumber.Text + ");";
             try
             {
                 command.ExecuteNonQuery();
@@ -127,7 +128,7 @@ namespace driving_school
 
             catch (Exception ee)
             {
-                MessageBox.Show("entry failed");
+                MessageBox.Show(ee.Message);
 
                 con.Close();
                 return;
