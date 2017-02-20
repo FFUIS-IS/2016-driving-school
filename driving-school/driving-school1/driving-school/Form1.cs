@@ -26,7 +26,7 @@ namespace driving_school
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (user.Text == "")
+            if (string.IsNullOrEmpty(user.Text))
             {
                 MessageBox.Show("You did not enter Username !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 user.Focus();
@@ -38,59 +38,42 @@ namespace driving_school
                 password.Focus();
                 return;
             }
-
-            SqlConnection con = new SqlConnection(Form1.path);
-            try
-            {
-                con.Open();
-            }
-
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.Message);
-                return;
-            }
-
-            SqlCommand command = con.CreateCommand();
-            command.CommandText = "SELECT * FROM  Registration WHERE user_name = '" + user.Text + "' AND password = '" + password.Text + "';";
-
-            SqlDataReader rdr = command.ExecuteReader();
-
-            while (rdr.Read())
-            {
-                if (user.Text == rdr[0].ToString() && password.Text == rdr[1].ToString().Trim())
-                {
-                    User = rdr[0].ToString();
-                    Password = rdr[1].ToString();
-                }
-            }
-
-            if (user.Text == User && password.Text == Password.Trim())
-            {
-
-                HomePage a = new HomePage();
-                a.Show();
-                this.Hide();
-            }
-
             else
             {
+                SqlConnection con = new SqlConnection(Form1.path);
                 try
                 {
-                    HomePage a = new HomePage();
-                    a.Show();
-                    this.Hide();
-                    user.Clear();
-                    password.Clear();
-                    user.Focus();
-                }
-                catch (Exception ee)
-                { MessageBox.Show(ee.Message); }
-               
-            }
-            
-            con.Close();
+                    con.Close();
+                    con.Open();
 
+                    SqlCommand command = con.CreateCommand();
+                    command.CommandText = "SELECT * FROM  Registration WHERE user_name = '" + user.Text + "' AND password = '" + password.Text + "';";
+
+                    SqlDataReader rdr = command.ExecuteReader();
+
+                    if (rdr.Read())
+                    {
+                        User = rdr[1].ToString();
+                        Password = rdr[2].ToString();
+                            
+                        DialogResult = DialogResult.OK;
+                        con.Close();
+
+                        this.Dispose();
+                    }
+                    else
+                        MessageBox.Show("NESTO ne Valja");
+                    con.Close();
+
+
+                }
+
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.Message);
+                    return;
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -102,6 +85,16 @@ namespace driving_school
         {
             Registration a = new Registration();
             a.Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                password.PasswordChar = '*';
+            }
+            else
+                password.PasswordChar = '\0';
         }
     }
 }

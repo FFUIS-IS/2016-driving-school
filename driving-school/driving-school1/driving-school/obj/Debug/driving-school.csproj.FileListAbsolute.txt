@@ -74,3 +74,6 @@ C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school1\driving-s
 C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school1\driving-school\obj\Debug\driving_school.ReviewTimeTraining.resources
 C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school1\driving-school\obj\Debug\driving_school.SearchCandidate.resources
 C:\Users\w7\Desktop\2016-driving-school\driving-school\driving-school1\driving-school\obj\Debug\driving-school.csproj.GenerateResource.Cache
+D:\2016-driving-school\driving-school\driving-school1\driving-school\bin\Debug\driving-school.exe.config
+D:\2016-driving-school\driving-school\driving-school1\driving-school\obj\Debug\driving-school.exe
+D:\2016-driving-school\driving-school\driving-school1\driving-school\obj\Debug\driving-school.pdb
