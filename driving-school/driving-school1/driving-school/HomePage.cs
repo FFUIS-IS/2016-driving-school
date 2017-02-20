@@ -26,7 +26,11 @@ namespace driving_school
 
         private void HomePage_Load(object sender, EventArgs e)
         {
+            Form1 forma = new Form1();
+            DialogResult result = forma.ShowDialog();
 
+            if (result == DialogResult.Cancel)
+                this.Dispose();
         }
 
         private void additionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,32 +89,27 @@ namespace driving_school
 
         private void deletionToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            DeletionLayingDriving a = new DeletionLayingDriving();
-            a.Show();
+            
         }
 
         private void deletionToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            DeletionLayingFirstHelp a = new DeletionLayingFirstHelp();
-            a.Show();
+            
         }
 
         private void deletionToolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            DeletionLayingTest a = new DeletionLayingTest();
-            a.Show();
+            
         }
 
         private void deletionToolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            DeletionTimeTraining a = new DeletionTimeTraining();
-            a.Show();
+            
         }
 
         private void searchSearchesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SearchCandidate a = new SearchCandidate();
-            a.Show();
+            
         }
 
         private void reviewToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,8 +162,7 @@ namespace driving_school
 
         private void reviewToolStripMenuItem8_Click(object sender, EventArgs e)
         {
-            ReviewTimeTraining a = new ReviewTimeTraining();
-            a.Show();
+            
         }
     }
 }
