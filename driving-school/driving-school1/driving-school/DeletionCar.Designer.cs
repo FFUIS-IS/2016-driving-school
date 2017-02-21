@@ -41,10 +41,12 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "DELETE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(140, 24);
             this.comboBox1.Name = "comboBox1";
@@ -70,6 +72,7 @@
             this.Controls.Add(this.button1);
             this.Name = "DeletionCar";
             this.Text = "DeletionCar";
+            this.Load += new System.EventHandler(this.DeletionCar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
