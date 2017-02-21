@@ -13,8 +13,7 @@ namespace driving_school
 {
     public partial class ReviewMunicipalities : Form
     {
-        public static string path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\w7\Desktop\driving-school1\driving-school\Databas.mdf;Integrated Security=True;Encrypt=False;User Instance=False;Context Connection=False";
-
+        
         public ReviewMunicipalities()
         {
             InitializeComponent();
@@ -22,15 +21,16 @@ namespace driving_school
 
         private void ReviewMunicipalities_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ReviewMunicipalities.path);
+            SqlConnection con = new SqlConnection(Form1.path);
 
             try
             {
+                con.Close();
                 con.Open();
             }
             catch (Exception ee)
             {
-                MessageBox.Show("Connection has failed");
+                MessageBox.Show("Connection has failed\n" + ee.ToString());
                 return;
             }
 
@@ -44,6 +44,12 @@ namespace driving_school
             {
                 listBox1.Items.Add(rdr.GetString(1));
             }
+            con.Close();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
