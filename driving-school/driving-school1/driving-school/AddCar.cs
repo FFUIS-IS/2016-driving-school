@@ -13,7 +13,7 @@ namespace driving_school
 {
     public partial class AddCar : Form
     {
-        public static string path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\w7\Desktop\driving-school1\driving-school\Databas.mdf;Integrated Security=True;Encrypt=False;User Instance=False;Context Connection=False";
+        
 
         public AddCar()
         {
@@ -22,28 +22,30 @@ namespace driving_school
 
         private void AddCar_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(AddCandidate.path);
+            SqlConnection con = new SqlConnection(Form1.path);
 
             try
             {
+
+                con.Close();
                 con.Open();
+                SqlCommand command = con.CreateCommand();
+
+                command.CommandText = "SELECT * FROM category ";
+
+                SqlDataReader rdr = command.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    comboBox1.Items.Add(rdr.GetString(1));
+                }
+                con.Close();
             }
             catch (Exception ee)
             {
-                MessageBox.Show("Connection has failed");
+                MessageBox.Show("Connection has failed\n" + ee.ToString());
                 return;
             }
-
-            SqlCommand command = con.CreateCommand();
-            command.CommandText = "SELECT * FROM category ";
-
-            SqlDataReader rdr = command.ExecuteReader();
-
-            while (rdr.Read())
-            {
-                comboBox1.Items.Add(rdr.GetString(1));
-            }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,49 +57,45 @@ namespace driving_school
                 return;
             }
 
-            else if (comboBox1.Text == "")
+            else if (comboBox1.SelectedIndex == -1)
             {
                 MessageBox.Show("you did not enter the category of the car !", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            SqlConnection con = new SqlConnection(AddCandidate.path);
-
-            try
+            else
             {
-                con.Open();
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show("Connection has failed");
-                return;
-            }
+                SqlConnection con = new SqlConnection(Form1.path);
 
-            SqlCommand command = con.CreateCommand();
+                try
+                {
 
-            command.CommandText = "SELECT Id FROM category WHERE name = '" + comboBox1.Text + "';";
+                    con.Close();
+                    con.Open();
 
-            SqlDataReader rdr = command.ExecuteReader();
-            rdr.Read();
-            int d = rdr.GetInt32(0);
+                    SqlCommand command = con.CreateCommand();
 
-            command.CommandText = "INSERT INTO candidate ( category_id, type) VALUES ( " + d + ",'" + textBox1.Text + "');";
-            try
-            {
-                command.ExecuteNonQuery();
-            }
+                    command.CommandText = "SELECT Id FROM category WHERE name = '" + comboBox1.SelectedItem.ToString() + "';";
 
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.Message);
+                    SqlDataReader rdr = command.ExecuteReader();
+                    rdr.Read();
+                    int d = rdr.GetInt32(0);
+                    rdr.Close();
 
-                con.Close();
-                return;
-            }
-            MessageBox.Show("Successfully entered car");
-            textBox1.Clear();
-            comboBox1.SelectedIndex = -1;
-            
+                    command.CommandText = "INSERT INTO car ( category_id, type) VALUES ( " + d + ",'" + textBox1.Text + "');";
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Successfully entered candidate");
+                    textBox1.Clear();
+                    comboBox1.SelectedIndex = -1;
+                    con.Close();
+                    
+
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show("Connection has failed\n" + ee.ToString());
+                    return;
+                }
+}
         }
     }
 }

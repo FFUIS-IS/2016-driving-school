@@ -13,7 +13,7 @@ namespace driving_school
 {
     public partial class ReviewCar : Form
     {
-        public static string path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\w7\Desktop\driving-school1\driving-school\Databas.mdf;Integrated Security=True;Encrypt=False;User Instance=False;Context Connection=False";
+        
 
         public ReviewCar()
         {
@@ -22,11 +22,21 @@ namespace driving_school
 
         private void ReviewCar_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ReviewCar.path);
+            SqlConnection con = new SqlConnection(Form1.path);
 
             try
             {
                 con.Open();
+
+                SqlCommand command = con.CreateCommand();
+                command.CommandText = "SELECT * FROM car;";
+
+                SqlDataReader rdr = command.ExecuteReader();
+                while (rdr.Read())
+                {
+                    listBox1.Items.Add(rdr.GetString(1) + "-" + rdr.GetInt32(0));
+                }
+                con.Close();
             }
             catch (Exception ee)
             {
@@ -34,17 +44,21 @@ namespace driving_school
                 return;
             }
 
-            SqlCommand command = con.CreateCommand();
+        }
 
-            command.CommandText = "SELECT * FROM car ";
-
-            SqlDataReader rdr = command.ExecuteReader();
-
-            while (rdr.Read())
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            int id = int.Parse(listBox1.SelectedItem.ToString().Substring(listBox1.SelectedItem.ToString().LastIndexOf('-') + 1));
+            SqlConnection con = new SqlConnection(Form1.path);
+            con.Open();
+            SqlCommand command = new SqlCommand("SELECT * FROM car WHERE id = " + id + ";", con);
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
             {
-                listBox1.Items.Add(rdr.GetString(1));
+                richTextBox1.Text += "type: " + reader.GetString(1) + "\n";
             }
-
+            con.Close();
         }
     }
 }
