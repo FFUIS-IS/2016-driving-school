@@ -13,38 +13,60 @@ namespace driving_school
 {
     public partial class ReviewInstructor : Form
     {
-        public static string path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\w7\Desktop\driving-school1\driving-school\Databas.mdf;Integrated Security=True;Encrypt=False;User Instance=False;Context Connection=False";
+        
 
         public ReviewInstructor()
         {
             InitializeComponent();
         }
 
+
+       
+
+
         private void ReviewInstructor_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ReviewInstructor.path);
+            SqlConnection con = new SqlConnection(Form1.path);
 
             try
             {
                 con.Open();
+
+                SqlCommand command = con.CreateCommand();
+                command.CommandText = "SELECT * FROM instructor;";
+
+                SqlDataReader rdr = command.ExecuteReader();
+                while (rdr.Read())
+                {
+                    listBox1.Items.Add(rdr.GetString(1) + " " + rdr.GetString(2) + "-" + rdr.GetInt32(0));
+                }
+                con.Close();
             }
             catch (Exception ee)
             {
                 MessageBox.Show("Connection has failed");
                 return;
             }
+        }
 
-            SqlCommand command = con.CreateCommand();
-
-            command.CommandText = "SELECT * FROM instructor ";
-
-            SqlDataReader rdr = command.ExecuteReader();
-
-            while (rdr.Read())
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            int id = int.Parse(listBox1.SelectedItem.ToString().Substring(listBox1.SelectedItem.ToString().LastIndexOf('-') + 1));
+            SqlConnection con = new SqlConnection(Form1.path);
+            con.Open();
+            SqlCommand command = new SqlCommand("SELECT * FROM instructor WHERE id = " + id + ";", con);
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
             {
-                listBox1.Items.Add(rdr.GetString(1));
+                richTextBox1.Text += "Ime: " + reader.GetString(1) + "\n";
+                richTextBox1.Text += "Prezime: " + reader.GetString(2) + "\n";
+                richTextBox1.Text += "JMBG: " + reader.GetString(3) + "\n";
+                richTextBox1.Text += "Telefon: " + reader.GetString(4) + "\n";
+                richTextBox1.Text += "Adresa: " + reader.GetString(5) + "\n";
             }
-
+            con.Close();
         }
     }
-}
+    }
+
