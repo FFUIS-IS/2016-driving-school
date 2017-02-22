@@ -61,13 +61,17 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Enter";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(119, 35);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // comboBox1
             // 
@@ -90,6 +94,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddLayingTest";
             this.Text = "AddLayingTest";
+            this.Load += new System.EventHandler(this.AddLayingTest_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
