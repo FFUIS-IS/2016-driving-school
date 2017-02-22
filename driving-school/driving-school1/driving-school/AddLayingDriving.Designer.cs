@@ -83,9 +83,12 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Enter";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(140, 62);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
@@ -134,6 +137,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddLayingDriving";
             this.Text = "AddLayingDriving";
+            this.Load += new System.EventHandler(this.AddLayingDriving_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
