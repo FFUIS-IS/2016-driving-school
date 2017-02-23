@@ -73,7 +73,15 @@ namespace driving_school
                 textBox5.Focus();
                 return;
             }
+
             else if(textBox3.Text.Length < 13)
+            {
+                MessageBox.Show("Unesite isprevno JMBG");
+                textBox3.Clear();
+                textBox3.Focus();
+            }
+
+            else if (textBox3.Text.Length > 13)
             {
                 MessageBox.Show("Unesite isprevno JMBG");
                 textBox3.Clear();

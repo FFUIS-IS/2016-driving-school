@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -121,30 +122,6 @@
     <Compile Include="DeletionInstructor.Designer.cs">
       <DependentUpon>DeletionInstructor.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeletionLayingDriving.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeletionLayingDriving.Designer.cs">
-      <DependentUpon>DeletionLayingDriving.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeletionLayingFirstHelp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeletionLayingFirstHelp.Designer.cs">
-      <DependentUpon>DeletionLayingFirstHelp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeletionLayingTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeletionLayingTest.Designer.cs">
-      <DependentUpon>DeletionLayingTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeletionTimeTraining.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeletionTimeTraining.Designer.cs">
-      <DependentUpon>DeletionTimeTraining.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,17 +190,11 @@
     <Compile Include="ReviewMunicipalities.Designer.cs">
       <DependentUpon>ReviewMunicipalities.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReviewTimeTraining.cs">
+    <Compile Include="RewievTimeTraining.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReviewTimeTraining.Designer.cs">
-      <DependentUpon>ReviewTimeTraining.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SearchCandidate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SearchCandidate.Designer.cs">
-      <DependentUpon>SearchCandidate.cs</DependentUpon>
+    <Compile Include="RewievTimeTraining.Designer.cs">
+      <DependentUpon>RewievTimeTraining.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddCandidate.resx">
       <DependentUpon>AddCandidate.cs</DependentUpon>
@@ -254,18 +225,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeletionInstructor.resx">
       <DependentUpon>DeletionInstructor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeletionLayingDriving.resx">
-      <DependentUpon>DeletionLayingDriving.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeletionLayingFirstHelp.resx">
-      <DependentUpon>DeletionLayingFirstHelp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeletionLayingTest.resx">
-      <DependentUpon>DeletionLayingTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeletionTimeTraining.resx">
-      <DependentUpon>DeletionTimeTraining.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -309,11 +268,8 @@
     <EmbeddedResource Include="ReviewMunicipalities.resx">
       <DependentUpon>ReviewMunicipalities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReviewTimeTraining.resx">
-      <DependentUpon>ReviewTimeTraining.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SearchCandidate.resx">
-      <DependentUpon>SearchCandidate.cs</DependentUpon>
+    <EmbeddedResource Include="RewievTimeTraining.resx">
+      <DependentUpon>RewievTimeTraining.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

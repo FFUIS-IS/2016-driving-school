@@ -36,15 +36,16 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(13, 24);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(170, 186);
+            this.listBox1.Size = new System.Drawing.Size(628, 264);
             this.listBox1.TabIndex = 0;
             // 
             // ReviewLayingFirstHelp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(653, 310);
             this.Controls.Add(this.listBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ReviewLayingFirstHelp";
             this.Text = "ReviewLayingFirstHelp";
             this.Load += new System.EventHandler(this.ReviewLayingFirstHelp_Load);

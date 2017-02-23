@@ -50,7 +50,7 @@ namespace driving_school
                 return;
             }
 
-            SqlConnection con = new SqlConnection(Registration.path);
+            SqlConnection con = new SqlConnection(Form1.path);
             try
             {
                 con.Open();

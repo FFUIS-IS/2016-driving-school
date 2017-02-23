@@ -92,6 +92,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "AddLayingFirstHelp";
             this.Text = "AddLayingFirstHelp";
+            this.Load += new System.EventHandler(this.AddLayingFirstHelp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

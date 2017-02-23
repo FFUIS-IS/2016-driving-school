@@ -99,6 +99,35 @@ namespace driving_school
                 MessageBox.Show("you did not enter the municipalities of the candidate !", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            else if (UniqueIN.Text.Length < 13)
+            {
+                MessageBox.Show("Unesite isprevno JMBG");
+                UniqueIN.Clear();
+                UniqueIN.Focus();
+            }
+
+            else if (UniqueIN.Text.Length > 13)
+            {
+                MessageBox.Show("Unesite isprevno JMBG");
+                UniqueIN.Clear();
+                UniqueIN.Focus();
+            }
+
+            else if (IDNumber.Text.Length < 9)
+            {
+                MessageBox.Show("Unesite isprevno BRLK");
+                IDNumber.Clear();
+                IDNumber.Focus();
+            }
+
+            else if (IDNumber.Text.Length > 9)
+            {
+                MessageBox.Show("Unesite isprevno BRLK");
+                IDNumber.Clear();
+                IDNumber.Focus();
+            }
+
             else
             {
                 SqlConnection con = new SqlConnection(Form1.path);

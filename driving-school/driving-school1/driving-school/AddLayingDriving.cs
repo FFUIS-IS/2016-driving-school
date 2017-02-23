@@ -31,6 +31,17 @@ namespace driving_school
             int instructorID = int.Parse(comboBox3.SelectedItem.ToString().Substring(comboBox3.SelectedItem.ToString().LastIndexOf('-') + 1));
             command.CommandText = "INSERT INTO laying_driving(date, candidat_id, car_id, instructor_id) VALUES "
                 + "('" + dateTimePicker1.Text + "', " + candidatID + " , " + carID + " , " + instructorID + ");";
+            try
+            {
+                con.Open();
+                command.ExecuteNonQuery();
+                MessageBox.Show("Uneseno u bazu.");
+                con.Close();
+            }
+            catch(SqlException ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
         }
 
         private void AddLayingDriving_Load(object sender, EventArgs e)

@@ -75,6 +75,7 @@ namespace driving_school
                         DeletionCandidate_Load(sender, e);
 
                     }
+                    
                     conn.Close();
 
                 }
